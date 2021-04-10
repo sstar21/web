@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      function setColor(color){
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'powderblue';
+          i = i + 1;
+        }
+      }
+      function nightDayHandler(self) {
+        var target = document.querySelector('body');
+          if(self.value === 'night'){
+          target.style.backgroundColor = 'black';
+          target.style.color = 'white';
+          self.value = 'day';
+
+          setColor('powderblue');
+        } else {
+          target.style.backgroundColor = 'white';
+          target.style.color = 'black';
+          self.value = 'night';
+
+          setColor('blue');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a href="https://ss-tar.tistory.com/">ss-tar</a>
+    ABCDEFG
+    가나다라마바사
+    <input type="button" value="night" onclick="
+      nightDayHandler(this);
+  ">
+  </body>
+</html>
